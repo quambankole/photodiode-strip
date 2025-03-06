@@ -5,11 +5,9 @@ basic.showLeds(`
     . . . . .
     . . . . .
     . . . . .
-`)
-
+    `)
 basic.forever(function () {
     touchValue = pins.analogReadPin(AnalogPin.P0)
-
     if (touchValue > 600 && touchValue < 650) {
         basic.showIcon(IconNames.Yes)
         music.play(music.stringPlayable("C C5 C C5 C C5 C C5 ", 120), music.PlaybackMode.UntilDone)
@@ -23,9 +21,8 @@ basic.forever(function () {
         basic.showIcon(IconNames.SmallHeart)
         music.play(music.stringPlayable("D F G D E G D F ", 120), music.PlaybackMode.UntilDone)
     } else {
-        basic.showIcon(IconNames.No) 
+        basic.showIcon(IconNames.No)
     }
-
-    basic.pause(100) 
-    basic.clearScreen() 
+    basic.pause(100)
+    basic.clearScreen()
 })
